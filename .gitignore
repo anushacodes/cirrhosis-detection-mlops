@@ -77,11 +77,11 @@ target/
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
 
-# # exclude data from source control by default
-# /data/
-
 # Ignore everything in data except DVC-tracked files
-data/*
+data/external/
+data/interim/
+data/processed/
+data/raw/*
 
 # Except DVC files
 !data/raw/*.dvc
