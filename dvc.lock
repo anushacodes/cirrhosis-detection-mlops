@@ -1,0 +1,42 @@
+schema: '2.0'
+stages:
+  full_pipeline:
+    cmd: python main.py
+    deps:
+    - path: data/raw/liver_cirrhosis.csv
+      hash: md5
+      md5: c6d186a16d1f2d34c76387fbfef2d992
+      size: 2352559
+    - path: main.py
+      hash: md5
+      md5: 2321400680f067e1d31e21f6407c9117
+      size: 831
+    - path: src/data.py
+      hash: md5
+      md5: 244d9ab8ae7c07c753a1937b63f9f5f5
+      size: 1320
+    - path: src/evaluate.py
+      hash: md5
+      md5: 63d9f21661f016264d075faf1ad44cea
+      size: 1248
+    - path: src/features.py
+      hash: md5
+      md5: 4263a1454411a861f9ad927a9d4ea583
+      size: 1061
+    - path: src/model.py
+      hash: md5
+      md5: e9d11163e079b76d399f0c0d8b151e82
+      size: 825
+    outs:
+    - path: data/processed/processed_data.csv
+      hash: md5
+      md5: 1eced814b5a932e32aea0480bcbb6021
+      size: 2077139
+    - path: models/model.pkl
+      hash: md5
+      md5: 9b80abe8135dc3d400353be6b466c85d
+      size: 1988062
+    - path: reports/figures/confusion_matrix.png
+      hash: md5
+      md5: 6f049e08b38b64b2e1142783bbcb9d46
+      size: 19637

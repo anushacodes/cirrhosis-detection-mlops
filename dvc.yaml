@@ -1,0 +1,14 @@
+stages:
+  full_pipeline:
+    cmd: python main.py
+    deps:
+      - main.py
+      - src/data.py
+      - src/features.py
+      - src/model.py
+      - src/evaluate.py
+      - data/raw/liver_cirrhosis.csv
+    outs:
+      - data/processed/processed_data.csv
+      - models/model.pkl
+      - reports/figures/confusion_matrix.png
