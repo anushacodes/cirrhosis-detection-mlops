@@ -15,7 +15,7 @@ def pipe_function(df):
         "Hepatomegaly": {"Y": 1, "N": 0},
         "Spiders": {"Y": 1, "N": 0},
         "Edema": {"Y": 1, "N": 0, "S": 2},
-        "Status": {"C": 0, "D": 1, "CL": 2},  
+        "Status": {"C": 0, "D": 1, "CL": 2},
     }
 
     drop_cols = ["N_Days", "Copper", "Cholesterol", "Tryglicerides", "Ascites"]
@@ -26,13 +26,24 @@ def pipe_function(df):
             df[col] = df[col].replace(mapping)
 
     expected_order = [
-        "Stage", "Status", "Drug", "Age", "Sex", "Hepatomegaly", "Spiders", "Edema",
-        "Bilirubin", "Albumin", "Alk_Phos", "SGOT", "Platelets", "Prothrombin"
+        "Stage",
+        "Status",
+        "Drug",
+        "Age",
+        "Sex",
+        "Hepatomegaly",
+        "Spiders",
+        "Edema",
+        "Bilirubin",
+        "Albumin",
+        "Alk_Phos",
+        "SGOT",
+        "Platelets",
+        "Prothrombin",
     ]
     df = df.reindex(columns=[c for c in expected_order if c in df.columns])
 
     return df
-
 
 
 class MakeDataset:
@@ -58,6 +69,7 @@ class MakeDataset:
         df_processed.to_csv(self.processed_path, index=False)
         logging.info("Processed data saved to %s", self.processed_path)
         return df_processed
+
 
 if __name__ == "__main__":
     make_data = MakeDataset()

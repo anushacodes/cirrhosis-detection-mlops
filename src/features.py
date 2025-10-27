@@ -15,7 +15,6 @@ class BuildFeatures:
 
         self.processed_path = self.config["data"]["processed_path"]
 
-
     def split_data(self):
         logging.info("Splitting dataset into train/test sets...")
         df = pd.read_csv(self.processed_path)

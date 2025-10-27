@@ -14,7 +14,6 @@ class TrainModel:
 
         self.model_params = self.config["model"]["params"]
 
-
     def train(self, X_train, y_train):
 
         logging.info("Training XGBoost model...")
@@ -30,7 +29,3 @@ class TrainModel:
         logging.info("Model saved to /models/model.json")
 
         return model
-
-
-
-
