@@ -40,6 +40,7 @@ Project Organization
 --------
 
 Things to try/add for future projects: experiment tracking with mlflow, ci/cd with github actions, push to docker hub, serverless deployment with aws lambda.
+
 ---------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
