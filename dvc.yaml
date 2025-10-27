@@ -10,5 +10,5 @@ stages:
       - data/raw/liver_cirrhosis.csv
     outs:
       - data/processed/processed_data.csv
-      - models/model.pkl
+      - models/model.json
 
