@@ -5,10 +5,10 @@ __pycache__/
 # C extensions
 *.so
 
-steps.txt
-data/dvc_remote
-notebooks/mlruns
-
+references/
+reports/
+notebooks/
+docs/
 
 # Distribution / packaging
 .Python
