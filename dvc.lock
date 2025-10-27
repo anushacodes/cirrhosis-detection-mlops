@@ -13,12 +13,12 @@ stages:
       size: 831
     - path: src/data.py
       hash: md5
-      md5: 244d9ab8ae7c07c753a1937b63f9f5f5
-      size: 1320
+      md5: 19b0fc89cae8dd51274bf893444eeee4
+      size: 1329
     - path: src/evaluate.py
       hash: md5
-      md5: 63d9f21661f016264d075faf1ad44cea
-      size: 1248
+      md5: e975628b958f0a361ef8ee6e9c93a180
+      size: 1250
     - path: src/features.py
       hash: md5
       md5: 4263a1454411a861f9ad927a9d4ea583
@@ -36,7 +36,3 @@ stages:
       hash: md5
       md5: 783f3926aafd10d833eaf415958d7b30
       size: 1966376
-    - path: reports/figures/confusion_matrix.png
-      hash: md5
-      md5: a93628c132461e6b6f4a6fc0a3b131f1
-      size: 21171

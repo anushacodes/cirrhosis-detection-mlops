@@ -11,4 +11,4 @@ stages:
     outs:
       - data/processed/processed_data.csv
       - models/model.pkl
-      - reports/figures/confusion_matrix.png
+

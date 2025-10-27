@@ -6,7 +6,8 @@ import logging
 import yaml
 import joblib
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
+logging.basicConfig(level=logging.INFO, format="%(asctime)s:%(levelname)s:%(message)s")
+
 
 class TrainModel:
 
@@ -15,7 +16,6 @@ class TrainModel:
             self.config = yaml.safe_load(f)
 
         self.model_params = self.config["model"]["params"]
-
 
     def train(self, X_train, y_train):
 

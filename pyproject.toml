@@ -1,0 +1,24 @@
+[project]
+name = "cirrhosis-detection-mlops"
+version = "0.1.0"
+description = "an e2e cirrhosis detection project"
+readme = "README.md"
+requires-python = ">=3.13"
+keywords = ["machine learning", 'mlops', 'docker', 'aws lambda']
+classifiers = ["Programming Language :: Python"]
+
+dependencies = [
+    "numpy==1.26.4",
+    "pandas==2.2.2",
+    "scikit-learn==1.5.2",
+    "xgboost==2.1.1",
+    "joblib==1.4.2",
+    "matplotlib==3.9.2",
+    "seaborn==0.13.2",
+    "PyYAML==6.0.2",
+    "dvc==3.51.2",
+    "fastapi==0.115.0",
+    "uvicorn==0.32.0",
+    "mangum==0.17.0",
+    "pydantic==2.9.2"
+]
