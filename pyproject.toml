@@ -20,5 +20,6 @@ dependencies = [
     "fastapi==0.115.0",
     "uvicorn==0.32.0",
     "mangum==0.17.0",
-    "pydantic==2.9.2"
+    "pydantic==2.9.2",
+    "streamlit"
 ]
