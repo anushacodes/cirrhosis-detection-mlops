@@ -9,6 +9,7 @@ references/
 reports/
 notebooks/
 docs/
+app/
 
 # Distribution / packaging
 .Python
