@@ -12,7 +12,7 @@ if __name__ == "__main__":
     logging.info("Starting pipeline...")
 
     make_data = MakeDataset()
-    make_data.create_pppipeline()
+    make_data.create_pipeline()
     df = make_data.clean()
 
     feature_builder = BuildFeatures()

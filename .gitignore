@@ -10,6 +10,7 @@ reports/
 notebooks/
 docs/
 app/
+notes.txt
 
 # Distribution / packaging
 .Python
@@ -100,3 +101,4 @@ data/raw/*
 # Mypy cache
 .mypy_cache/
 
+data/dvc_remote/
