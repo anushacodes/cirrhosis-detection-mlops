@@ -9,21 +9,22 @@ install-uv:
 
 
 format:
-	black .
+	black *.py src/*.py
 
 lint:
-	flake8 .
+	flake8 *.py src/*.py
 
 dvc:
 	dvc init
 	dvc repro
 
-init: install-uv format lint dvc
+test:
+	uv run test.py
+	
+init: install-uv format dvc
 	
 
 build:
-	# build container
-	docker-build:
 	docker build -t cirrhosis-detector .
 	docker run -p $(APP_PORT):$(APP_PORT) cirrhosis-detector
 

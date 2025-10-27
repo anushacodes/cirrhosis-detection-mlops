@@ -20,7 +20,9 @@ class TrainModel:
         model = XGBClassifier(**self.model_params)
         model.fit(X_train, y_train)
 
-        joblib.dump(model, "models/model.pkl")
-        logging.info("Model saved to /models/model.pkl")
+        # joblib.dump(model, "models/model.pkl")
+        model.save_model("models/model.json")
+
+        logging.info("Model saved to /models/model.json")
 
         return model
