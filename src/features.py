@@ -2,9 +2,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import logging
 import yaml
-import warnings
-
-warnings.filterwarnings("ignore", category=FutureWarning)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s:%(levelname)s:%(message)s")
 
@@ -18,8 +15,8 @@ class BuildFeatures:
 
         self.processed_path = self.config["data"]["processed_path"]
 
-    def split_data(self):
 
+    def split_data(self):
         logging.info("Splitting dataset into train/test sets...")
         df = pd.read_csv(self.processed_path)
 
@@ -37,3 +34,8 @@ class BuildFeatures:
         logging.info("Train/test split complete.")
 
         return X_train, X_test, y_train, y_test
+
+
+if __name__ == "__main__":
+    feature_builder = BuildFeatures()
+    feature_builder.split_data()

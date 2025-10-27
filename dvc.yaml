@@ -1,14 +1,50 @@
+# stages:
+#   full_pipeline:
+#     cmd: python main.py
+#     deps:
+#       - main.py
+#       - src/data.py
+#       - src/features.py
+#       - src/model.py
+#       - src/evaluate.py
+#       - data/raw/liver_cirrhosis.csv
+#     outs:
+#       - data/processed/processed_data.csv
+#       - models/processing.pkl
+#       - models/model.json
+
 stages:
-  full_pipeline:
-    cmd: python main.py
+  preprocess:
+    cmd: python -m src.data
     deps:
-      - main.py
       - src/data.py
-      - src/features.py
-      - src/model.py
-      - src/evaluate.py
       - data/raw/liver_cirrhosis.csv
+      - config.yaml
     outs:
       - data/processed/processed_data.csv
+      - models/processing.pkl
+
+  split:
+    cmd: python -m src.features
+    deps:
+      - src/features.py
+      - data/processed/processed_data.csv
+      - config.yaml
+
+
+  train:
+    cmd: python -m src.model
+    deps:
+      - src/model.py
+      - models/processing.pkl
+      - config.yaml
+    outs:
       - models/model.json
 
+  evaluate:
+    cmd: python -m src.evaluate
+    deps:
+      - src/evaluate.py
+      - models/processing.pkl
+      - models/model.json
+      - config.yaml

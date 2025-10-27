@@ -14,15 +14,23 @@ class TrainModel:
 
         self.model_params = self.config["model"]["params"]
 
+
     def train(self, X_train, y_train):
 
         logging.info("Training XGBoost model...")
-        model = XGBClassifier(**self.model_params)
-        model.fit(X_train, y_train)
 
-        # joblib.dump(model, "models/model.pkl")
+        pipeline = joblib.load("models/processing.pkl")
+        X_train_processed = pipeline(X_train)
+
+        model = XGBClassifier(**self.model_params)
+        model.fit(X_train_processed, y_train)
+
         model.save_model("models/model.json")
 
         logging.info("Model saved to /models/model.json")
 
         return model
+
+
+
+
