@@ -34,9 +34,9 @@ stages:
       size: 2077139
     - path: models/model.pkl
       hash: md5
-      md5: 9b80abe8135dc3d400353be6b466c85d
-      size: 1988062
+      md5: 783f3926aafd10d833eaf415958d7b30
+      size: 1966376
     - path: reports/figures/confusion_matrix.png
       hash: md5
-      md5: 6f049e08b38b64b2e1142783bbcb9d46
-      size: 19637
+      md5: a93628c132461e6b6f4a6fc0a3b131f1
+      size: 21171
